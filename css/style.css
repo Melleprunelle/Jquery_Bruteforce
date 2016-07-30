@@ -1,0 +1,8 @@
+.centrer {
+	margin-top: 50vh;
+	transform: translateY(-50%);
+}
+
+button {
+	margin-top: 30px;
+}
