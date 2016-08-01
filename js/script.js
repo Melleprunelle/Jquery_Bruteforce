@@ -20,8 +20,8 @@ jQuery(document).ready(function appeler(){
 	$("#appelAjax").click(function(){
 		//Appel Ajax, l'url n'existe plus....
         //var dicoTxt = type : 'GET', url: 'http://docusland.fr/code-academie/js_bruteforce/dico.txt', datatype: 'dico.txt';
-		url: "http://docusland.fr/code-academie/js_bruteforce/data/dico.txt"
-		, complete: function (result) {
+		url: "http://docusland.fr/code-academie/js_bruteforce/data/dico.txt",
+		complete: function (result) {
 			dicoTxt = result.responseText.split("\n");
 		//Tentative appel Ajax ratée.
 			/*$("div").html(result);*/
@@ -40,7 +40,9 @@ jQuery(document).ready(function appeler(){
 			//changement de l'adresse avec "?password=" et la valeau de "i"
 			adresse.reload();
 			//rechargement de cette page pour tester la nouvelle adresse
-				if (adresse != false) {
+			var faux = "<div style='color:red; font-size:18px'>Erroneous password</div>";
+			//Variable permettant une comparaison
+				if (adresse != faux) {
 					//si cette valeur de i ne renvoir pas vrai, alors la boucle continue à tourner
 					return dicoTxt[i];
 					//si elle est égal à vrai, j'ai un retour et l'alert l'affiche
