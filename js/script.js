@@ -15,11 +15,17 @@ $("#appel-ajax").click(function(){
 
 jQuery(document).ready(function appeler(){
 
-	var dicoTxt;
+	var dicoTxt = {};
 
 	$("#appelAjax").click(function(){
 		//Appel Ajax, l'url n'existe plus....
-        var dicoTxt = type : 'GET', url: 'http://docusland.fr/code-academie/js_bruteforce/dico.txt', datatype: 'dico.txt';
+        //var dicoTxt = type : 'GET', url: 'http://docusland.fr/code-academie/js_bruteforce/dico.txt', datatype: 'dico.txt';
+		url: "http://docusland.fr/code-academie/js_bruteforce/data/dico.txt"
+		, complete: function (result) {
+			dicoTxt = result.responseText.split("\n");
+		//Tentative appel Ajax ratée.
+			/*$("div").html(result);*/
+}
     });
 
 
