@@ -30,7 +30,7 @@ jQuery(document).ready(function appeler(){
 
 
 	$('#appelAjax').click(function decodeur() {
-		dicoTxt.split();
+		//dicoTxt.split();
 		//division du dico.txt en tableau
 		for (var i = 0; i < dicoTxt.length; i++) {
 			//boucle for pour parcourir le tableau
